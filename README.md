@@ -4,10 +4,10 @@ EWeT: Online Intelligent Email and Web Template Designer
 ## Advisor
 * [Murat SARAN](http://www.cankaya.edu.tr/akademik_birimler/cv/Dr.%C3%96%C4%9Fr.%C3%9CyesiMuratSARAN.html)
 ## Team Members
-* Hamdullah AYDOĞDU
-* Abdulkadir ŞAHİN
-* Fırat OYBAK
-* Sarhad MUSTAFA
+* [Hamdullah AYDOĞDU](https://github.com/HamdullahAydogdu)
+* [Abdulkadir ŞAHİN](https://github.com/kadirs43)
+* [Fırat OYBAK](https://github.com/firatoybak)
+* [Sarhad MUSTAFA](https://github.com/sarhadmustafa)
 ## Documents
 * [Project Web Page](https://ewet.online/)
 * [Literature Review](https://github.com/CankayaUniversity/ceng-407-408-2022-2023-EWeT-Online-Intelligent-Email-and-Web-Template-Designer/wiki/Literature-Review)
