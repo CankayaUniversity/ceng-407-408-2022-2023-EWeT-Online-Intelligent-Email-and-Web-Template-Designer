@@ -2,7 +2,7 @@
 EWeT: Online Intelligent Email and Web Template Designer
 
 ## Advisor
-* Murat SARAN
+* [Murat SARAN](http://www.cankaya.edu.tr/akademik_birimler/cv/Dr.%C3%96%C4%9Fr.%C3%9CyesiMuratSARAN.html)
 ## Team Members
 * Hamdullah AYDOĞDU
 * Abdulkadir ŞAHİN
