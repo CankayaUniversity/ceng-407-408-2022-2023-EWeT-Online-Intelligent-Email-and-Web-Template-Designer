@@ -16,4 +16,5 @@ EWeT: Online Intelligent Email and Web Template Designer
 * [Software Design Description (SDD)](https://github.com/CankayaUniversity/ceng-407-408-2022-2023-EWeT-Online-Intelligent-Email-and-Web-Template-Designer/wiki/Software-Design-Description)
 * [Project Report](https://github.com/CankayaUniversity/ceng-407-408-2022-2023-EWeT-Online-Intelligent-Email-and-Web-Template-Designer/wiki/Project-Report)
 
+* [Project Presentation](https://github.com/CankayaUniversity/ceng-407-408-2022-2023-EWeT-Online-Intelligent-Email-and-Web-Template-Designer/wiki/Project-Presentation)
 
