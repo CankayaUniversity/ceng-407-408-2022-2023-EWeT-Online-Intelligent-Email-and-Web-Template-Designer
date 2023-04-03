@@ -18,3 +18,4 @@ EWeT: Online Intelligent Email and Web Template Designer
 
 * [Project Presentation](https://github.com/CankayaUniversity/ceng-407-408-2022-2023-EWeT-Online-Intelligent-Email-and-Web-Template-Designer/wiki/Project-Presentation)
 
+![PWP-ceng408](https://user-images.githubusercontent.com/105982550/229478032-85cd56dc-bb99-47d8-ba3c-ff44effff79f.jpg)
