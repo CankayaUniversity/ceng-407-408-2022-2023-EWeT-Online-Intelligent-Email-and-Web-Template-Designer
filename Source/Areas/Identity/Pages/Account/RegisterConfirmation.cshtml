@@ -1,0 +1,40 @@
+﻿@page
+@model RegisterConfirmationModel
+@{
+    ViewData["Title"] = "Register confirmation";
+}
+
+<!DOCTYPE html>
+@*<h1>@ViewData["Title"]</h1>*@
+<head>
+    <title>Confirmation E-Mail</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+@{
+    if (@Model.DisplayConfirmAccountLink)
+    {
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <h1 class="mt-5">Onay E-postası</h1>
+                    <p>Merhaba @User.Identity?.Name!</p>
+                    <p>Bu e-posta, kaydınızın onaylandığını bildirmek için gönderilmektedir.</p>
+                    <p>Lütfen aşağıdaki bağlantıya tıklayarak hesabınızı etkinleştirin:</p>
+                    <a href="@Model.EmailConfirmationUrl" class="btn btn-primary">Hesabımı Etkinleştir</a>
+
+                    <p>İyi günler dileriz,</p>
+                    <p>EWeT Online Ekibi</p>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+<p>
+        Please check your email to confirm your account.
+</p>
+    }
+}
+   

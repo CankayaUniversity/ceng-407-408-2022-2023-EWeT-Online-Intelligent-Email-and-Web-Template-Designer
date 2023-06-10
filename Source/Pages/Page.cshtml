@@ -1,0 +1,136 @@
+﻿@page
+
+@{
+    ViewData["Title"] = "Grapes JS Example";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <script src="~/js/lib/grapes.min.js"></script>
+    <link rel="stylesheet" href="~/css/lib/grapes.min.css" />
+
+    <!-- Add Style and Script for Preset Webpage Builder -->
+    <script src="~/js/lib/grapesjs-preset-webpage.min.js"></script>
+    <link rel="stylesheet" href="~/css/lib/grapesjs-preset-webpage.min.css" />
+
+    <link rel="stylesheet" href="~/css/main.css" />
+
+    <!-- Add html2canvas library -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body id="template-body">
+    <div id="template-content"></div>
+    <div class="capture-container">
+        <!-- Content to capture -->
+    </div>
+    <div id="editor">
+        <p>Testing Editor using Grapes JS library</p>
+    </div>
+
+    <script type="text/javascript">
+        // Initialize the GrapesJS editor
+        const editor = grapesjs.init({
+            container: "#editor",
+            fromElement: true,
+            width: "auto",
+            storageManager: {
+                autosave: false,
+                setStepsBeforeSave: 1,
+                type: 'remote',
+                urlStore: '@Url.Page("/Editor/Save")',
+                urlLoad: '@Url.Page("/Editor/Load")',
+                contentTypeJson: true,
+            },
+            plugins: ["gjs-preset-webpage"],
+            pluginsOpts: {
+                "gjs-preset-webpage": {},
+            },
+        });
+
+        editor.Panels.addButton('options', [{
+            id: 'save-db',
+            className: 'fa fa-floppy-o',
+            command: 'save-db',
+            attributes: { title: 'Save DB' }
+        }, {
+            id: 'download-image',
+            className: 'fa fa-download',
+            command: 'download-image',
+            attributes: { title: 'Download as Image' }
+        }]);
+
+        // Add the commands
+        editor.Commands.add('save-db', {
+            run: function (editor, sender) {
+                sender && sender.set('active'); // turn off the button
+                editor.store();
+            }
+        });
+
+        editor.Commands.add('download-image', {
+            run: function (editor) {
+                console.log('Download command executed');
+
+                // Get the modified content from GrapesJS
+                const modifiedContent = editor.getHtml();
+
+                // Get the template-content div
+                const templateContent = document.getElementById('template-content');
+
+                // Update the content of the div with the modified content from GrapesJS
+                templateContent.innerHTML = modifiedContent;
+
+                // Get the CSS styles from GrapesJS
+                const cssStyles = editor.getCss();
+
+                // Create a style element
+                const styleElement = document.createElement('style');
+
+                // Set the CSS styles to the style element
+                styleElement.innerHTML = cssStyles;
+
+                // Append the style element to the template-content div
+                templateContent.appendChild(styleElement);
+
+                // Use html2canvas to capture the div as an image
+                html2canvas(templateContent, {
+                    scrollY: -window.scrollY,
+                    useCORS: true
+                }).then(function (canvas) {
+                    // Convert the canvas to a data URL
+                    const image = canvas.toDataURL('image/jpeg').replace('image/jpeg', 'image/octet-stream');
+
+                    // Create a temporary link element
+                    const link = document.createElement('a');
+                    link.href = image;
+                    link.download = 'template.jpg';
+
+                    // Programmatically trigger the click event
+                    link.dispatchEvent(new MouseEvent('click'));
+                });
+
+                // Reset the content of the div and the style element
+                templateContent.innerHTML = '';
+                styleElement.innerHTML = '';
+            }
+        });
+
+
+
+
+
+
+
+
+
+        editor.on('storage:load', function (e) { console.log('Loaded ', e); });
+        editor.on('storage:store', function (e) { console.log('Stored ', e); });
+
+    </script>
+</body>
+</html>

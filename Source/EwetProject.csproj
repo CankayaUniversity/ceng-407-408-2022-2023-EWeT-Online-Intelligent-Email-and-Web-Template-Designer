@@ -1,0 +1,76 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-EwetProject-ef1da3fd-f402-4ff7-bdd4-563bb5396ace</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Pages\Privacy - Kopyala.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\Index1.cshtml" />
+    <Content Remove="Pages\LoginTest.cshtml" />
+    <Content Remove="Pages\TestRazor.cshtml" />
+    <Content Remove="wwwroot\css\.DS_Store" />
+    <Content Remove="wwwroot\js\lib\grapes.min.js" />
+    <Content Remove="wwwroot\js\lib\grapesjs-preset-webpage.min.js" />
+    <Content Remove="wwwroot\css\js\main.js" />
+    <Content Remove="wwwroot\js\scripts.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\favicon.ico" />
+    <None Include="wwwroot\assets\img\bg-masthead.jpg" />
+    <None Include="wwwroot\assets\img\bg-showcase-1.jpg" />
+    <None Include="wwwroot\assets\img\bg-showcase-2.jpg" />
+    <None Include="wwwroot\assets\img\bg-showcase-3.jpg" />
+    <None Include="wwwroot\assets\img\bg.jpg" />
+    <None Include="wwwroot\assets\img\Cankaya.png" />
+    <None Include="wwwroot\assets\img\Fırat.jpeg" />
+    <None Include="wwwroot\assets\img\Hamdullah1.jpeg" />
+    <None Include="wwwroot\assets\img\Kadir.jpeg" />
+    <None Include="wwwroot\assets\img\Murat_Saran.jpg" />
+    <None Include="wwwroot\assets\img\Sarhad.jpeg" />
+    <None Include="wwwroot\css\.DS_Store" />
+    <None Include="wwwroot\css\index.html" />
+    <None Include="wwwroot\js\lib\grapes.min.js" />
+    <None Include="wwwroot\js\lib\grapesjs-preset-webpage.min.js" />
+    <None Include="wwwroot\js\main.js" />
+    <None Include="wwwroot\css\styles.css" />
+    <None Include="wwwroot\css\fonts\main-fonts.eot" />
+    <None Include="wwwroot\css\fonts\main-fonts.svg" />
+    <None Include="wwwroot\css\fonts\main-fonts.ttf" />
+    <None Include="wwwroot\css\fonts\main-fonts.woff" />
+    <None Include="wwwroot\css\lib\grapes.min.css" />
+    <None Include="wwwroot\css\lib\grapesjs-preset-webpage.min.css" />
+    <None Include="wwwroot\css\main.css" />
+    <None Include="wwwroot\images\Favicon.png" />
+    <None Include="wwwroot\images\Header.jpg" />
+    <None Include="wwwroot\images\Logo-Yan.png" />
+    <None Include="wwwroot\images\Logo.png" />
+    <None Include="wwwroot\images\Logo2.png" />
+    <None Include="wwwroot\js\scripts.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="bootstrap" Version="5.2.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.14" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.16" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.16" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.16" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.16">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\css\js\" />
+  </ItemGroup>
+
+</Project>
